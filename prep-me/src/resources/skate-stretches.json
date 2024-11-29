@@ -26,14 +26,6 @@
         },
         {
             "id": 3,
-            "name": "Neck Tilts",
-            "bodyParts": "Neck",
-            "description": "Gently tilt your head to one side (ear towards shoulder), hold for 5 seconds, and return to the center. Repeat on the other side. Perform tilts forward (chin to chest) and backward as well.",
-            "duration": "5 tilts in each direction.",
-            "advice": "Keep movements slow and avoid overextending backward."
-        },
-        {
-            "id": 4,
             "name": "Cat-Cow Stretch",
             "bodyParts": "Spine & Shoulders",
             "description": "Start on all fours. Inhale and arch your back while lifting your head and tailbone (Cow). Exhale and round your spine while tucking your chin and pelvis (Cat).",
@@ -41,7 +33,7 @@
             "advice":"Advice: Match the movements with deep breathing, moving smoothly between poses."
         },
         {
-            "id": 5,
+            "id": 4,
             "name": "Hip Circles",
             "bodyParts": "Hips",
             "description": "Stand with your feet shoulder-width apart, place your hands on your hips, and make large, slow circles. Rotate in one direction, then reverse.",
@@ -49,7 +41,7 @@
             "advice":"Keep your knees slightly bent and your movements fluid."
         },
         {
-            "id": 6,
+            "id": 5,
             "name": "Harmstring Stretch",
             "bodyParts": "Harmstring & Lower Back",
             "description": "Stand tall, then hinge forward from your hips to touch your toes (or as far as comfortable). Hold the stretch for 10 to 15 seconds, then return to standing.",
@@ -57,7 +49,7 @@
             "advice":"Avoid bouncing and keep your knees slightly bent if needed."
         },
         {
-            "id": 7,
+            "id": 6,
             "name": "Ankle Rolls",
             "bodyParts": "Ankles",
             "description": "Stand or sit, lifting one foot off the ground. Slowly rotate your ankle in circles, first clockwise, then counterclockwise. Repeat with the other ankle.",
@@ -65,7 +57,7 @@
             "advice":"Keep the movement controlled and focus on the full range of motion."
         },
         {
-            "id": 8,
+            "id": 7,
             "name": "Side Lunges",
             "bodyParts": "Hips & Knees",
             "description": "Step one foot out to the side, keeping the other leg straight. Lower your body toward the bent leg while keeping your back straight. Return to the center and switch sides.",
@@ -73,7 +65,7 @@
             "advice":"Keep your movements steady and avoid letting your knee go past your toes."
         },
         {
-            "id": 9,
+            "id": 8,
             "name": "Elbow Extends",
             "bodyParts": "Elbows",
             "description": "Bend and straighten your elbow slowly, as if mimicking a biceps curl without weights.",
@@ -81,7 +73,7 @@
             "advice":"Move smoothly without rushing, ensuring the joint feels warmed up."
         },
         {
-            "id": 10,
+            "id": 9,
             "name": "Skate Kicks",
             "bodyParts": "Quadriceps & Hips",
             "description": "Stand on one leg, pull the other leg’s foot toward your glutes, and hold with your hand. Keep your knees close together and your back straight.",
@@ -89,7 +81,7 @@
             "advice":"Use a wall for balance if needed, and avoid arching your back."
         },
         {
-            "id": 11,
+            "id": 10,
             "name": "Step-Back Lunges",
             "bodyParts": "Quadriceps & Knees",
             "description": "Stand tall with your feet hip-width apart. Step one leg back into a lunge position, lowering your body until your back knee nearly touches the ground. Push back up to standing and alternate legs.",
@@ -97,7 +89,7 @@
             "advice":"Keep your front knee aligned over your ankle and move slowly for control. Engage your core for better balance."
         },
         {
-            "id": 12,
+            "id": 11,
             "name": "Calf Roll Downs",
             "bodyParts": "Ankles & Calves",
             "description": "Stand with your feet hip-width apart. Slowly rise onto your toes, hold for a second, then roll back down through your heels. Add balance by performing on one leg if desired.",
@@ -105,7 +97,7 @@
             "advice":"Move slowly for controlled activation of the ankle muscles. Focus on smooth, deliberate transitions."
         },
         {
-            "id": 13,
+            "id": 12,
             "name": "Deep Squat Hold",
             "bodyParts": "Hips & Glutes",
             "description": "Stand with your feet slightly wider than shoulder-width apart. Squat down as low as you can comfortably go, keeping your chest lifted and heels on the ground. Hold the position for 10–20 seconds, then return to standing.",

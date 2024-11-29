@@ -7,8 +7,9 @@
 
         <div class="header-container">
             <span class="title snd-txt">{{ sport }} Stretching</span>
-            <span class="subtitle fst-txt">Move n°{{ stretchId }} - {{ stretchName }}</span>
-            <StretchImage :sportName="sportName" :stretchNumber="stretchId" />
+            <span class="subtitle fst-txt">{{ stretchId+1 }} - {{ stretchName }}</span>
+            <!-- <StretchImage :sportName="sportName" :stretchNumber="stretchId" /> -->
+             <img :src=getIllustrationPath() style="width: 16rem; height: 16rem;"/>
         </div>
         <div class="stretch-content">
             <span class="stretch-description core-txt">{{ stretchDescription }}</span>
@@ -117,6 +118,13 @@ function updateStretch()
     stretchDuration.value = getStretchDuration(stretchId.value);
     stretchAdvice.value = getStretchAdvice(stretchId.value);
 }
+
+function getIllustrationPath()
+{
+    const filePath = "/illustrations/"+sportName+"/stretch-"+stretchId.value+".png";
+    console.log("Illustration is located at -> "+filePath);
+    return filePath;
+}
 // Handling Stretches Navigation
 function previousStretch()
 {
@@ -162,6 +170,7 @@ function finishStretches()
 
     .header-container {
         margin-top: 2rem !important;
+        align-items: center;
 
         .stretch-illustration {
             background-color: green;
