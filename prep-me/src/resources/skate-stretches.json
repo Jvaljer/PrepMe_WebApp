@@ -1,0 +1,14 @@
+{
+    "stretches": [
+        {
+            "id": 0,
+            "name": "stretch0",
+            "description": "Clear instructions for this move, duration, how to perform it safely, ..."
+        },
+        {
+            "id": 1,
+            "name": "stretch1",
+            "description": "Clear instructions for this move, duration, how to perform it safely, ..."
+        }
+    ]
+}
