@@ -24,19 +24,21 @@ function goToSPorts()
 <style lang="less" scoped>
 #home-container {
     gap: 8rem;
-}
-.home-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.home-pre-title {
-    font-size: 2rem;
-    font-weight: @semibold;
-    letter-spacing: 0.125rem;
-}
-.home-title {
-    font-size: 4rem;
-    font-weight: @bold;
+
+    .home-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .home-pre-title {
+            font-size: 2rem;
+            font-weight: @semibold;
+            letter-spacing: 0.125rem;
+        }
+        .home-title {
+            font-size: 4rem;
+            font-weight: @bold;
+        }
+    }
 }
 </style>
