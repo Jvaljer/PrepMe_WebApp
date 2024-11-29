@@ -13,10 +13,21 @@
         <div class="stretch-content">
             <span class="stretch-description">{{ stretchDescription }}</span>
             <div class="stretch-navigation">
-                <button v-if="stretchAmount > 0"
+                <button v-if="stretchId > 0"
                     class="nav-btn" @click="previousStretch"
-                >Go Back</button>
-                <button class="nav-btn"@click="nextStretch">Next Move</button>
+                >
+                    Go Back
+                </button>
+                <button v-if="stretchId != (stretchAmount-1)"
+                    class="nav-btn "@click="nextStretch"
+                >
+                    Next Move
+                </button>
+                <button v-if="stretchId == (stretchAmount-1)"
+                    class="nav-btn" @click="finishStretches"
+                >
+                    Finish Session !
+                </button>
             </div>
         </div>
     </div>
@@ -26,7 +37,11 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import testStretchImg from '@/assets/illustrations/test-stretching.png';
+import testStretchImg from '@/assets/illustrations/stretching-example.png';
+
+import skateStretchesData from '@/resources/skate-stretches.json';
+import calisthenicsStretchesData from '@/resources/skate-stretches.json';
+import skiingStretchesData from '@/resources/skate-stretches.json';
 
 const router = useRouter();
 const route = useRoute();
@@ -35,43 +50,61 @@ const sport = route.query.sport || 'ERR_NOSPORT_BIS';
 const sportName = sport.charAt(0).toLowerCase() + sport.slice(1) || 'ERR_NONAME';
 
 const stretchId = ref('ERR_NOID');
-const stretchName = ref(sportName);
+const stretchName = ref('');
 const stretchDescription = ref('ERR_NODESCRIPTION');
 const stretchIllustrationPath = ref(testStretchImg);
 
 const stretchAmount = ref(0);
 
+const stretches = ref(null);
+
 // Fetching stretches content
 onMounted(() => {
+    stretches.value = getStretchesData();
     stretchId.value = 0;  // Setting the stretchId to 0
-    stretchAmount.value = fetchStretchesAmount();
+    stretchAmount.value = getStretchesAmount();
     updateStretch();
 });
 
-function fetchStretchName(id)
+function getStretchesData()
 {
-    // TODO
+    switch (sport)
+    {
+        case 'Skate':
+            return skateStretchesData;
+        case 'Calisthenics':
+            return calisthenicsStretchesData;
+        case 'Skiing':
+            return skiingStretchesData;
+        default:
+            return 'ERR_SPORTNOTFOUND';
+    }
+}
+function getStretchName(id)
+{
+    return stretches.value.stretches[id].name;
 }
 
-function fetchStretchDescription(id)
+function getStretchDescription(id)
 {
-    // TODO
+    return stretches.value.stretches[id].description;
 }
 
 function getStretchIllustrationPath(id)
 {
-    // TODO
+    const fileName = "skate-"+id;
+    return `@/assets/illustrations/${sportName}/${fileName}`;
 }
 
-function fetchStretchesAmount()
+function getStretchesAmount()
 {
-    // TODO
+    return stretches.value.stretches.length;
 }
 
 function updateStretch()
 {
-    stretchName.value = fetchStretchName(stretchId.value);
-    stretchDescription.value = fetchStretchDescription(stretchId.value);
+    stretchName.value = getStretchName(stretchId.value);
+    stretchDescription.value = getStretchDescription(stretchId.value);
     stretchIllustrationPath.value = getStretchIllustrationPath(stretchId.value);
 }
 // Handling Stretches Navigation
@@ -85,9 +118,14 @@ function nextStretch()
     stretchId.value++;
     updateStretch();
 }
+
 function closeSession()
 {
     router.push('/sports');
+}
+function finishStretches()
+{
+    // TODO
 }
 </script>
 
@@ -110,13 +148,18 @@ function closeSession()
 
 #stretch-container {
     background-image: url('@/assets/images/background-image-32.png');
+    gap: 1rem !important;
 
     .header-container {
         margin-top: 2rem !important;
 
         .stretch-illustration {
+            background-color: green;
             align-self: center;
-            padding-top: 2rem;
+            margin-top: 0.5rem;
+
+            width: 20rem;
+            height: 20rem;
         }
     }
     .stretch-content {
@@ -131,6 +174,8 @@ function closeSession()
         height: 100%;
 
         .stretch-description {
+            font-size: 1.5rem;
+            line-height: 1;
             width: 80%;
             padding-top: 2rem;
             text-align: left;

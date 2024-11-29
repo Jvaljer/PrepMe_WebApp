@@ -2,13 +2,18 @@
     "stretches": [
         {
             "id": 0,
-            "name": "stretch0",
+            "name": "Stretch0",
             "description": "Clear instructions for this move, duration, how to perform it safely, ..."
         },
         {
             "id": 1,
-            "name": "stretch1",
-            "description": "Clear instructions for this move, duration, how to perform it safely, ..."
+            "name": "Stretch1",
+            "description": "This one is supposed to be slightly easier, but don't overkill it otherwise you'll increase the injury risks !"
+        },
+        {
+            "id": 2,
+            "name": "Stretch2",
+            "description": "Last but not least ! After this one you'll be ready to go all in for your sport session !"
         }
     ]
 }

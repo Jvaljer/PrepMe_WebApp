@@ -6,8 +6,8 @@
         </div>
         <div class="sport-list">
             <button class="sport-item" @click="selectSport('Skate')">Skateboard</button>
-            <button class="sport-item" @click="selectSport('Calisthenics')">Calisthenics</button>
-            <button class="sport-item" @click="selectSport('Skiing')">Skiing</button>
+            <button class="sport-item unavailable" @click="selectSport('Calisthenics')">Calisthenics</button>
+            <button class="sport-item unavailable" @click="selectSport('Skiing')">Skiing</button>
         </div>
     </div>
 </template>
@@ -18,8 +18,13 @@ import { useRouter } from 'vue-router';
 
 const router = useRouter();
 
+
 function selectSport(sport)
 {
+    if (sport != 'Skate') {
+        return;
+    }
+
     router.push(
         { path: '/loading', query: {sport} }
     );
