@@ -42,7 +42,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
-import testStretchImg from '@/assets/illustrations/stretching-example.png';
 
 import skateStretchesData from '@/resources/skate-stretches.json';
 import calisthenicsStretchesData from '@/resources/skate-stretches.json';
@@ -120,7 +119,6 @@ function updateStretch()
 function getIllustrationPath()
 {
     const filePath = "/illustrations/"+sportName+"/stretch-"+stretchId.value+".png";
-    console.log("Illustration is located at -> "+filePath);
     return filePath;
 }
 // Handling Stretches Navigation
