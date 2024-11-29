@@ -8,10 +8,14 @@
         <div class="header-container">
             <span class="title snd-txt">{{ sport }} Stretching</span>
             <span class="subtitle fst-txt">Move n°{{ stretchId }} - {{ stretchName }}</span>
-            <img :src="stretchIllustrationPath" class="stretch-illustration"/>
+            <StretchImage :sportName="sportName" :stretchNumber="stretchId" />
         </div>
         <div class="stretch-content">
-            <span class="stretch-description">{{ stretchDescription }}</span>
+            <span class="stretch-description core-txt">{{ stretchDescription }}</span>
+            <div class="stretch-infos core-txt">
+                <span class="stretch-duration"><b>Duration:</b> {{ stretchDuration }}</span>
+                <span class="stretch-advice"><b>Advice:</b> {{ stretchAdvice }}</span>
+            </div>
             <div class="stretch-navigation">
                 <button v-if="stretchId > 0"
                     class="nav-btn" @click="previousStretch"
@@ -43,6 +47,8 @@ import skateStretchesData from '@/resources/skate-stretches.json';
 import calisthenicsStretchesData from '@/resources/skate-stretches.json';
 import skiingStretchesData from '@/resources/skate-stretches.json';
 
+import StretchImage from '@/components/StretchImage.vue';
+
 const router = useRouter();
 const route = useRoute();
 
@@ -52,7 +58,8 @@ const sportName = sport.charAt(0).toLowerCase() + sport.slice(1) || 'ERR_NONAME'
 const stretchId = ref('ERR_NOID');
 const stretchName = ref('');
 const stretchDescription = ref('ERR_NODESCRIPTION');
-const stretchIllustrationPath = ref(testStretchImg);
+const stretchDuration = ref('ERR_NODURATION');
+const stretchAdvice = ref('ERR_NOADVICE');
 
 const stretchAmount = ref(0);
 
@@ -84,16 +91,18 @@ function getStretchName(id)
 {
     return stretches.value.stretches[id].name;
 }
+function getStretchDuration(id)
+{
+    return stretches.value.stretches[id].duration;
+}
+function getStretchAdvice(id)
+{
+    return stretches.value.stretches[id].advice;
+}
 
 function getStretchDescription(id)
 {
     return stretches.value.stretches[id].description;
-}
-
-function getStretchIllustrationPath(id)
-{
-    const fileName = "skate-"+id;
-    return `@/assets/illustrations/${sportName}/${fileName}`;
 }
 
 function getStretchesAmount()
@@ -105,7 +114,8 @@ function updateStretch()
 {
     stretchName.value = getStretchName(stretchId.value);
     stretchDescription.value = getStretchDescription(stretchId.value);
-    stretchIllustrationPath.value = getStretchIllustrationPath(stretchId.value);
+    stretchDuration.value = getStretchDuration(stretchId.value);
+    stretchAdvice.value = getStretchAdvice(stretchId.value);
 }
 // Handling Stretches Navigation
 function previousStretch()
@@ -158,8 +168,8 @@ function finishStretches()
             align-self: center;
             margin-top: 0.5rem;
 
-            width: 20rem;
-            height: 20rem;
+            width: 18rem;
+            height: 18rem;
         }
     }
     .stretch-content {
@@ -180,6 +190,17 @@ function finishStretches()
             padding-top: 2rem;
             text-align: left;
         }
+
+        .stretch-infos {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            line-height: 1;
+            font-style: italic;
+            font-size: 1rem;
+        }
+
         .stretch-navigation {
             width: 80%;
             display: flex;

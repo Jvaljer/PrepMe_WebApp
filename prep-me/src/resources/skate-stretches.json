@@ -2,18 +2,115 @@
     "stretches": [
         {
             "id": 0,
-            "name": "Stretch0",
-            "description": "Clear instructions for this move, duration, how to perform it safely, ..."
+            "name": "Wrist Rolls",
+            "bodyParts": "Wrists",
+            "description": "Extend your arms forward and slowly rotate your wrists in circles, first clockwise, then counterclockwise. Focus on full range of motion without rushing.",
+            "duration": "10 circles each direction.",
+            "advice": "Perform slowly to avoid straining, with controlled breathing."
         },
         {
             "id": 1,
-            "name": "Stretch1",
-            "description": "This one is supposed to be slightly easier, but don't overkill it otherwise you'll increase the injury risks !"
+            "name": "Shoulder Circles",
+            "bodyParts": "Shoulders",
+            "description": "Extend your arms out to the sides at shoulder height and draw large circles in the air. Start with small circles and gradually increase their size.",
+            "duration": "8 to 10 circles forward and backward.",
+            "advice": "Go at a moderate pace; avoid sudden jerky movements."
         },
         {
             "id": 2,
-            "name": "Stretch2",
-            "description": "Last but not least ! After this one you'll be ready to go all in for your sport session !"
+            "name": "Neck Tilts",
+            "bodyParts": "Neck",
+            "description": "Gently tilt your head to one side (ear towards shoulder), hold for 5 seconds, and return to the center. Repeat on the other side. Perform tilts forward (chin to chest) and backward as well.",
+            "duration": "5 tilts in each direction.",
+            "advice": "Keep movements slow and avoid overextending backward."
+        },
+        {
+            "id": 3,
+            "name": "Neck Tilts",
+            "bodyParts": "Neck",
+            "description": "Gently tilt your head to one side (ear towards shoulder), hold for 5 seconds, and return to the center. Repeat on the other side. Perform tilts forward (chin to chest) and backward as well.",
+            "duration": "5 tilts in each direction.",
+            "advice": "Keep movements slow and avoid overextending backward."
+        },
+        {
+            "id": 4,
+            "name": "Cat-Cow Stretch",
+            "bodyParts": "Spine & Shoulders",
+            "description": "Start on all fours. Inhale and arch your back while lifting your head and tailbone (Cow). Exhale and round your spine while tucking your chin and pelvis (Cat).",
+            "duration":"8 to 10 repetitions.",
+            "advice":"Advice: Match the movements with deep breathing, moving smoothly between poses."
+        },
+        {
+            "id": 5,
+            "name": "Hip Circles",
+            "bodyParts": "Hips",
+            "description": "Stand with your feet shoulder-width apart, place your hands on your hips, and make large, slow circles. Rotate in one direction, then reverse.",
+            "duration":"10 circles each way.",
+            "advice":"Keep your knees slightly bent and your movements fluid."
+        },
+        {
+            "id": 6,
+            "name": "Harmstring Stretch",
+            "bodyParts": "Harmstring & Lower Back",
+            "description": "Stand tall, then hinge forward from your hips to touch your toes (or as far as comfortable). Hold the stretch for 10 to 15 seconds, then return to standing.",
+            "duration":"3 to 4 repetitions, holding each stretch.",
+            "advice":"Avoid bouncing and keep your knees slightly bent if needed."
+        },
+        {
+            "id": 7,
+            "name": "Ankle Rolls",
+            "bodyParts": "Ankles",
+            "description": "Stand or sit, lifting one foot off the ground. Slowly rotate your ankle in circles, first clockwise, then counterclockwise. Repeat with the other ankle.",
+            "duration":"10 to 12 rotations per direction.",
+            "advice":"Keep the movement controlled and focus on the full range of motion."
+        },
+        {
+            "id": 8,
+            "name": "Side Lunges",
+            "bodyParts": "Hips & Knees",
+            "description": "Step one foot out to the side, keeping the other leg straight. Lower your body toward the bent leg while keeping your back straight. Return to the center and switch sides.",
+            "duration":"8 to 10 lunges per side.",
+            "advice":"Keep your movements steady and avoid letting your knee go past your toes."
+        },
+        {
+            "id": 9,
+            "name": "Elbow Extends",
+            "bodyParts": "Elbows",
+            "description": "Bend and straighten your elbow slowly, as if mimicking a biceps curl without weights.",
+            "duration":"8 to 12 repetitions per arm.",
+            "advice":"Move smoothly without rushing, ensuring the joint feels warmed up."
+        },
+        {
+            "id": 10,
+            "name": "Skate Kicks",
+            "bodyParts": "Quadriceps & Hips",
+            "description": "Stand on one leg, pull the other leg’s foot toward your glutes, and hold with your hand. Keep your knees close together and your back straight.",
+            "duration":"Hold for 15 to 20 seconds per leg.",
+            "advice":"Use a wall for balance if needed, and avoid arching your back."
+        },
+        {
+            "id": 11,
+            "name": "Step-Back Lunges",
+            "bodyParts": "Quadriceps & Knees",
+            "description": "Stand tall with your feet hip-width apart. Step one leg back into a lunge position, lowering your body until your back knee nearly touches the ground. Push back up to standing and alternate legs.",
+            "duration":" 8 to 10 repetitions per leg.",
+            "advice":"Keep your front knee aligned over your ankle and move slowly for control. Engage your core for better balance."
+        },
+        {
+            "id": 12,
+            "name": "Calf Roll Downs",
+            "bodyParts": "Ankles & Calves",
+            "description": "Stand with your feet hip-width apart. Slowly rise onto your toes, hold for a second, then roll back down through your heels. Add balance by performing on one leg if desired.",
+            "duration":"12 to 15 repetitions.",
+            "advice":"Move slowly for controlled activation of the ankle muscles. Focus on smooth, deliberate transitions."
+        },
+        {
+            "id": 13,
+            "name": "Deep Squat Hold",
+            "bodyParts": "Hips & Glutes",
+            "description": "Stand with your feet slightly wider than shoulder-width apart. Squat down as low as you can comfortably go, keeping your chest lifted and heels on the ground. Hold the position for 10–20 seconds, then return to standing.",
+            "duration":"3 to 4 repetitions, holding each squat.",
+            "advice":"Focus on opening your hips and keep your knees tracking over your toes. Avoid leaning forward."
         }
     ]
 }
