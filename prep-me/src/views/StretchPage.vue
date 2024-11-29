@@ -48,8 +48,6 @@ import skateStretchesData from '@/resources/skate-stretches.json';
 import calisthenicsStretchesData from '@/resources/skate-stretches.json';
 import skiingStretchesData from '@/resources/skate-stretches.json';
 
-import StretchImage from '@/components/StretchImage.vue';
-
 const router = useRouter();
 const route = useRoute();
 
