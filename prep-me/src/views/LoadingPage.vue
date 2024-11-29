@@ -1,7 +1,11 @@
 <template>
-    <h1>{{ sport }} stretching session is ready !</h1>
-    <h3>Ensure to follow the instruction, do not hesitate to take your time before going to the next step</h3>
-    <button @click="goToStretch">Start Stretching</button>
+    <div id="loading-container" class="v-container">
+        <div class="header-container">
+            <span class="title snd-txt">{{ sport }} stretching session is ready !<br></span>
+            <span class="subtitle fst-txt">Ensure to follow the instruction, do not hesitate to take your time before going to the next step</span>
+        </div>
+        <button class="design-btn" @click="goToStretch">Start Stretching !</button>
+    </div>
 </template>
 
 
@@ -15,7 +19,9 @@ const sport = route.query.sport || 'ERR_NOSPORT';
 
 function goToStretch()
 {
-    router.push('/stretch');
+    router.push(
+        { path: '/stretch', query: {sport} }
+    );
 }
 </script>
 

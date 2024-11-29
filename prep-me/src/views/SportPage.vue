@@ -1,13 +1,13 @@
 <template>
     <div id="sport-container" class="v-container">
-        <div class="sport-header">
-            <span class="sport-title snd-txt ">Choose your Sport<br></span>
-            <span class="sport-subtitle fst-txt">Studies showed that stretching reduced sports injury by 68% !</span>
+        <div class="header-container">
+            <span class="title snd-txt ">Choose your Sport<br></span>
+            <span class="subtitle fst-txt">Studies showed that stretching reduced sports injury by 68% !</span>
         </div>
         <div class="sport-list">
-            <button class="sport-item" @click="selectSport('skate')">Skateboard</button>
-            <button class="sport-item" @click="selectSport('calisthenics')">Calisthenics</button>
-            <button class="sport-item" @click="selectSport('skiing')">Skiing</button>
+            <button class="sport-item" @click="selectSport('Skate')">Skateboard</button>
+            <button class="sport-item" @click="selectSport('Calisthenics')">Calisthenics</button>
+            <button class="sport-item" @click="selectSport('Skiing')">Skiing</button>
         </div>
     </div>
 </template>
@@ -29,19 +29,12 @@ function selectSport(sport)
 
 <style lang="less" scoped>
 #sport-container {
-    gap: 8rem;
 
     .sport-header {
         width: 80%;
-
-        .sport-title {
-            font-weight: @semibold;
-            font-size: 2rem;
-        }
-        .sport-subtitle {
-            font-size: 1.5rem;
-            line-height: 1.25;
-        }
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
     }
     .sport-list {
         display: flex;

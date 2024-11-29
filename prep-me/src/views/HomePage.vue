@@ -23,7 +23,6 @@ function goToSPorts()
 
 <style lang="less" scoped>
 #home-container {
-    gap: 8rem;
 
     .home-text {
         display: flex;
