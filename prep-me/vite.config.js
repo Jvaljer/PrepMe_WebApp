@@ -15,4 +15,12 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-})
+  css: {
+    preprocessorOptions: {
+      less: {
+        // Inject base.less globally into all .less files
+        additionalData: `@import "@/assets/base.less";`
+      },
+    },
+  },
+});

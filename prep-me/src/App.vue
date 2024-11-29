@@ -1,17 +1,17 @@
 <template>
   <div id="app-container">
-    <HomePage />
+    <router-view />
   </div>
 </template>
 
 
 <script setup>
-import HomePage from './views/HomePage.vue';
-
-
 </script>
 
 
-<style scoped>
-
+<style lang="less" scoped>
+#app-container {
+  width: 100%;
+  height: 100%;
+}
 </style>

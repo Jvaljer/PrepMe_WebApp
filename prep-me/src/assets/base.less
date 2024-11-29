@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+@background-color: #708871;
+@primary-color: white;
+@secondary-color: #FEF7EB;
+@core-text-color: #2E382E;
+
+@semibold: 600;
+@bold: 700;
+
+
+#app {
+    font-family: 'Poppins', sans-serif;
+
+    background-image: url('@/assets/images/background-image.png');
+    background-size: cover; /* Optional: Ensures the image covers the entire background */
+    background-position: center; /* Optional: Centers the image */
+    background-repeat: no-repeat; /* Optional: Prevents tiling */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100vw;
+    height: 100vh;
+
+    margin: -0.5rem;
+    overflow: hidden;
+}
+
+// Shared classes
+.v-container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+}
+
+.fst-txt {
+    color: @primary-color;
+}
+.snd-txt {
+    color: @secondary-color;
+}
+.core-txt {
+    color: @core-text-color;
+}
+
+.design-btn {
+    background: fade(@secondary-color, 16%);
+
+    border: solid 0.5rem @secondary-color;
+    border-radius: 1.5rem;
+
+    padding: 1.5rem 2rem;
+
+    color: @secondary-color;
+    font-size: 2rem;
+    font-weight: @semibold;
+
+    transition: all 0.25s ease;
+
+    &:active {
+        border-radius: 3rem;
+        background: fade(@secondary-color, 64%);
+    }
+}
