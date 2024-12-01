@@ -14,14 +14,20 @@
         <div class="stretch-content">
             <span class="stretch-description core-txt">{{ stretchDescription }}</span>
             <div class="stretch-infos core-txt">
-                <span class="stretch-duration"><b>Duration:</b> {{ stretchDuration }}</span>
-                <span class="stretch-advice"><b>Advice:</b> {{ stretchAdvice }}</span>
+                <div class="stretch-info">
+                    <img src="@/assets/images/timer-icon.png" alt="" class="stretch-icon">
+                    <span>{{ stretchDuration }}</span>
+                </div>
+                <div class="stretch-info">
+                    <img src="@/assets/images/advice-icon.png" alt="" class="stretch-icon">
+                    <span>"{{ stretchAdvice }}"</span>
+                </div>
             </div>
             <div class="stretch-navigation">
                 <button v-if="stretchId > 0"
                     class="nav-btn" @click="previousStretch"
                 >
-                    Go Back
+                    Back
                 </button>
                 <button v-if="stretchId != (stretchAmount-1)"
                     class="nav-btn "@click="nextStretch"
@@ -31,7 +37,7 @@
                 <button v-if="stretchId == (stretchAmount-1)"
                     class="nav-btn" @click="finishStretches"
                 >
-                    Finish Session !
+                    Finish !
                 </button>
             </div>
         </div>
@@ -139,7 +145,9 @@ function closeSession()
 }
 function finishStretches()
 {
-    // TODO
+    router.push(
+        { path: '/finished' }
+    );
 }
 </script>
 
@@ -204,6 +212,17 @@ function finishStretches()
             line-height: 1;
             font-style: italic;
             font-size: 1rem;
+
+            .stretch-info {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+            }
+            .stretch-icon {
+                width: 1.5rem;
+                height: 1.5rem;
+                margin-right: 0.25rem;
+            }
         }
 
         .stretch-navigation {
