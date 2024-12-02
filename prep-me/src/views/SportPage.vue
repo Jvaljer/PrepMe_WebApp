@@ -9,6 +9,10 @@
                 <img src="@/assets/images/skate-icon.png" alt="" class="sport-icon">
                 Skateboard
             </button>
+            <button class="sport-item" @click="selectSport('Gym')">
+                <img src="@/assets/images/gym-icon.png" alt="" class="sport-icon">
+                Gym
+            </button>
             <button class="sport-item unavailable" @click="selectSport('Calisthenics')">
                 <img src="@/assets/images/muscle-icon.png" alt="" class="sport-icon">
                 Calisthenics
@@ -30,10 +34,10 @@ const router = useRouter();
 
 function selectSport(sport)
 {
-    if (sport != 'Skate') {
+    if (sport != 'Skate' || sport != 'Gym') {
         return;
     }
-
+    
     router.push(
         { path: '/loading', query: {sport} }
     );
