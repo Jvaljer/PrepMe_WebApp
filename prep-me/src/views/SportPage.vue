@@ -6,16 +6,20 @@
         </div>
         <div class="action-list">
             <button class="action-item" @click="selectSport('Skate')">
-                <img src="@/assets/images/skate-icon.png" alt="" class="action-icon">
+                <img src="@/assets/icons/sports/skate-icon.png" alt="" class="action-icon">
                 Skateboard
             </button>
-            <button class="action-item" @click="selectSport('Gym')">
-                <img src="@/assets/images/gym-icon.png" alt="" class="action-icon">
+            <button class="action-item unavailable" @click="selectSport('Gym')">
+                <img src="@/assets/icons/sports/gym-icon.png" alt="" class="action-icon">
                 Gym
             </button>
             <button class="action-item unavailable" @click="selectSport('Calisthenics')">
-                <img src="@/assets/images/muscle-icon.png" alt="" class="action-icon">
+                <img src="@/assets/icons/sports/muscle-icon.png" alt="" class="action-icon">
                 Calisthenics
+            </button>
+            <button class="action-item unavailable" @click="selectSport('Ski')">
+                <img src="@/assets/icons/sports/ski-icon.png" alt="" class="action-icon">
+                Ski
             </button>
         </div>
     </div>
@@ -30,7 +34,7 @@ const router = useRouter();
 
 function selectSport(sport)
 {
-    if (sport != 'Skate' && sport != 'Gym') {
+    if (sport != 'Skate') {
         return;
     }
     
@@ -45,6 +49,7 @@ function selectSport(sport)
 #sport-container {
     justify-content: start;
     padding-top: 4rem;
+    gap: 6rem;
     
     .sport-header {
         margin-top: 4rem;

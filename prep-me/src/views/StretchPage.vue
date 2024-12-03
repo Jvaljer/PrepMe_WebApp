@@ -15,11 +15,11 @@
             <span class="stretch-description core-txt">{{ stretchDescription }}</span>
             <div class="stretch-infos core-txt">
                 <div class="stretch-info">
-                    <img src="@/assets/images/timer-icon.png" alt="" class="stretch-icon">
+                    <img src="@/assets/icons/timer-icon.png" alt="" class="stretch-icon">
                     <span>{{ stretchDuration }}</span>
                 </div>
                 <div class="stretch-info">
-                    <img src="@/assets/images/advice-icon.png" alt="" class="stretch-icon">
+                    <img src="@/assets/icons/advice-icon.png" alt="" class="stretch-icon">
                     <span>"{{ stretchAdvice }}"</span>
                 </div>
             </div>

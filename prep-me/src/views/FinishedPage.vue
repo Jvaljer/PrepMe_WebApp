@@ -4,7 +4,7 @@
             <span class="header-title snd-txt">Well Done !</span>
             <span class="header-subtitle fst-txt">You're now ready to perform with a minimal risk of injury</span>
         </div>
-        <img src="@/assets/images/done-icon.png" alt="" class="finished-img">
+        <img src="@/assets/icons/done-icon.png" alt="" class="finished-img">
     </div>
 </template>
   

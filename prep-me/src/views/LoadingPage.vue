@@ -9,19 +9,19 @@
         </div>
         <div class="action-list">
             <button class="action-item" @click="selectBodyPart('Push')">
-                <img src="@/assets/images/pec-icon.png" alt="" class="action-icon">
+                <img src="@/assets/icons/pec-icon.png" alt="" class="action-icon">
                 Push
             </button>
             <button class="action-item" @click="selectBodyPart('Pull')">
-                <img src="@/assets/images/back-icon.png" alt="" class="action-icon">
+                <img src="@/assets/icons/back-icon.png" alt="" class="action-icon">
                 Pull
             </button>
             <button class="action-item unavailable" @click="selectBodyPart('Legs')">
-                <img src="@/assets/images/legs-icon.png" alt="" class="action-icon">
+                <img src="@/assets/icons/legs-icon.png" alt="" class="action-icon">
                 Legs
             </button>
             <button class="action-item unavailable" @click="selectBodyPart('Shoulders')">
-                <img src="@/assets/images/shoulder-icon.png" alt="" class="action-icon">
+                <img src="@/assets/icons/shoulder-icon.png" alt="" class="action-icon">
                 Shoulders
             </button>
         </div>
@@ -81,5 +81,6 @@ function goToStretch()
 #loading-container {
     justify-content: start;
     padding-top: 4rem;
+    gap: 4rem;
 }
 </style>
