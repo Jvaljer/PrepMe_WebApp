@@ -93,3 +93,39 @@
 .unavailable {
     opacity: 0.32;
 }
+
+.action-list {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 50%;
+    gap: 3rem;
+
+    overflow-y: auto;
+
+    .action-item {
+        display: flex;
+        gap: 1rem;
+
+        background: @secondary-color;
+        color: @core-text-color;
+
+        border: none;
+        border-radius: 1.5rem;
+
+        font-size: 2rem;
+        font-weight: @semibold;
+
+        width: 100%;
+        padding: 1.5rem 2rem;
+
+        .action-icon {
+            width: 2.5rem;
+        }
+
+        transition: all 0.125s ease;
+        &:active {
+            transform: scale(1.05);
+        }
+    }
+}

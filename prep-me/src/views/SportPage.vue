@@ -4,22 +4,18 @@
             <span class="title snd-txt ">Choose your Sport<br></span>
             <span class="subtitle fst-txt">Studies showed that stretching reduced sports injury by 68% !</span>
         </div>
-        <div class="sport-list">
-            <button class="sport-item" @click="selectSport('Skate')">
-                <img src="@/assets/images/skate-icon.png" alt="" class="sport-icon">
+        <div class="action-list">
+            <button class="action-item" @click="selectSport('Skate')">
+                <img src="@/assets/images/skate-icon.png" alt="" class="action-icon">
                 Skateboard
             </button>
-            <button class="sport-item" @click="selectSport('Gym')">
-                <img src="@/assets/images/gym-icon.png" alt="" class="sport-icon">
+            <button class="action-item" @click="selectSport('Gym')">
+                <img src="@/assets/images/gym-icon.png" alt="" class="action-icon">
                 Gym
             </button>
-            <button class="sport-item unavailable" @click="selectSport('Calisthenics')">
-                <img src="@/assets/images/muscle-icon.png" alt="" class="sport-icon">
+            <button class="action-item unavailable" @click="selectSport('Calisthenics')">
+                <img src="@/assets/images/muscle-icon.png" alt="" class="action-icon">
                 Calisthenics
-            </button>
-            <button class="sport-item unavailable" @click="selectSport('Skiing')">
-                <img src="@/assets/images/ski-icon.png" alt="" class="sport-icon">
-                Skiing
             </button>
         </div>
     </div>
@@ -34,7 +30,7 @@ const router = useRouter();
 
 function selectSport(sport)
 {
-    if (sport != 'Skate' || sport != 'Gym') {
+    if (sport != 'Skate' && sport != 'Gym') {
         return;
     }
     
@@ -47,44 +43,15 @@ function selectSport(sport)
 
 <style lang="less" scoped>
 #sport-container {
-
+    justify-content: start;
+    padding-top: 4rem;
+    
     .sport-header {
+        margin-top: 4rem;
         width: 80%;
         display: flex;
         flex-direction: column;
         gap: 1rem;
-    }
-    .sport-list {
-        display: flex;
-        flex-direction: column;
-        width: 80%;
-        gap: 3rem;
-
-        .sport-item {
-            display: flex;
-            gap: 1rem;
-
-            background: @secondary-color;
-            color: @core-text-color;
-
-            border: none;
-            border-radius: 1.5rem;
-
-            font-size: 2rem;
-            font-weight: @semibold;
-
-            width: 100%;
-            padding: 1.5rem 2rem;
-
-            .sport-icon {
-                width: 2.5rem;
-            }
-
-            transition: all 0.125s ease;
-            &:active {
-                transform: scale(1.05);
-            }
-        }
     }
 }
 </style>
