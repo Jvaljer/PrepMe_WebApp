@@ -4,7 +4,7 @@
             <span class="title snd-txt appear-slide-from-left">Choose your Sport<br></span>
             <span class="subtitle fst-txt appear-slide-from-right">Studies showed that stretching reduced sports injury by 68% !</span>
         </div>
-        <div class="action-list scale-up">
+        <div class="action-list fade-in">
             <button class="action-item" @click="selectSport('Skate')">
                 <img src="@/assets/icons/sports/skate-icon.png" alt="" class="action-icon">
                 Skateboard
@@ -91,20 +91,18 @@ function selectSport(sport)
     }
 }
 
-.scale-up {
+.fade-in {
     opacity: 0;
 
     animation-delay: 0.5s !important;
-    animation: scale-up 1s ease-in;
+    animation: fade-in 1s ease-in;
     animation-fill-mode: forwards;
 }
-@keyframes scale-up {
+@keyframes fade-in {
     from {
-        transform: scale(0);
         opacity: 0;
     }
     to {
-        transform: scale(1);
         opacity: 1;
     }
 }

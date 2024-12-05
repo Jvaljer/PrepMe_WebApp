@@ -120,6 +120,12 @@
         width: 100%;
         padding: 1.5rem 2rem;
 
+        scrollbar-width: none; /* Firefox: Hides scrollbar */
+        -ms-overflow-style: none; /* IE: Hides scrollbar */
+        &::-webkit-scrollbar {
+            display: none; /* Chrome, Safari: Hides scrollbar */
+        }
+
         .action-icon {
             width: 2.5rem;
         }
