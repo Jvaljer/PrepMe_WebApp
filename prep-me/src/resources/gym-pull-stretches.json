@@ -1,0 +1,52 @@
+{
+    "stretches": [
+        {
+            "id": 0,
+            "name": "Shoulder Blade Squeezes",
+            "bodyParts": "Upper Back",
+            "description": "Sit or stand, pinch shoulder blades together and hold briefly.",
+            "duration": "10 seconds.",
+            "advice": "Keep movement controlled, focus on squeezing."
+        },
+        {
+            "id": 1,
+            "name": "Bicep Curls",
+            "bodyParts": "Biceps",
+            "description": "Curl one arm up slowly, pause at the top, then lower.",
+            "duration": "12 repetitions per arm.",
+            "advice": "Move smoothly, avoid jerking."
+        },
+        {
+            "id": 2,
+            "name": "Cat-Cow Stretch",
+            "bodyParts": "Spine & Core",
+            "description": "On hands and knees, arch back up (Cat) and down (Cow).",
+            "duration": "8 to 10 repetitions.",
+            "advice": "Match movements with deep breathing."
+        },
+        {
+            "id": 3,
+            "name": "Reverse Lunges",
+            "bodyParts": "Back & Core",
+            "description": "Step back into a lunge, lowering the body. Alternate legs.",
+            "duration": "8 to 10 lunges per leg.",
+            "advice": "Keep front knee over ankle, engage core."
+        },
+        {
+            "id": 4,
+            "name": "Towel Rows",
+            "bodyParts": "Upper Back",
+            "description": "Grab a towel, pull it towards chest, elbows close to body.",
+            "duration": "12 repetitions.",
+            "advice": "Control the movement, focus on engaging upper back."
+        },
+        {
+            "id": 5,
+            "name": "Seated Core Twists",
+            "bodyParts": "Core",
+            "description": "Sit with feet flat, twist torso to one side and hold.",
+            "duration": "10 seconds per side.",
+            "advice": "Keep movements controlled, avoid excessive rotation."
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+{
+    "stretches": [
+        {
+            "id": 0,
+            "name": "Wrist Flexors Stretch",
+            "bodyParts": "Wrists",
+            "description": "Extend arms in front, palms away. Press down on fingers to stretch wrist flexors.",
+            "duration": "15 seconds each side.",
+            "advice": "Perform slowly, controlled breathing."
+        },
+        {
+            "id": 1,
+            "name": "Arm Swings",
+            "bodyParts": "Shoulders & Arms",
+            "description": "Swing arms forward and backward in a controlled motion.",
+            "duration": "10 swings forward, 10 backward.",
+            "advice": "Smooth movements, avoid force."
+        },
+        {
+            "id": 2,
+            "name": "Neck Circles",
+            "bodyParts": "Neck",
+            "description": "Rotate head in full circles, chin towards shoulder and back.",
+            "duration": "5 circles each direction.",
+            "advice": "Move slowly, avoid overextension."
+        },
+        {
+            "id": 3,
+            "name": "Spinal Twists",
+            "bodyParts": "Spine & Shoulders",
+            "description": "Sit, twist upper body to one side, hold. Switch sides.",
+            "duration": "10 seconds per side.",
+            "advice": "Keep spine straight, avoid forcing twist."
+        },
+        {
+            "id": 4,
+            "name": "Side-to-Side Hips Shift",
+            "bodyParts": "Hips",
+            "description": "Shift hips from side to side, knees slightly bent.",
+            "duration": "10 shifts each way.",
+            "advice": "Controlled, fluid movements."
+        },
+        {
+            "id": 5,
+            "name": "Tricep Stretch",
+            "bodyParts": "Triceps & Shoulders",
+            "description": "Raise one arm overhead, bend elbow. Press gently on elbow.",
+            "duration": "15 seconds each side.",
+            "advice": "Keep stretch gentle, no bouncing."
+        }
+    ]
+}

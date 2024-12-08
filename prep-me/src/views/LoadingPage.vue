@@ -8,21 +8,17 @@
             <span class="subtitle fst-txt">Please select the body part you will train ! Adapting your stretches to your session will ensure better performances.</span>
         </div>
         <div class="action-list">
-            <button class="action-item" @click="selectBodyPart('Push')">
+            <button class="action-item" @click="selectBodyPart('push')">
                 <img src="@/assets/icons/pec-icon.png" alt="" class="action-icon">
                 Push
             </button>
-            <button class="action-item" @click="selectBodyPart('Pull')">
+            <button class="action-item" @click="selectBodyPart('pull')">
                 <img src="@/assets/icons/back-icon.png" alt="" class="action-icon">
                 Pull
             </button>
-            <button class="action-item unavailable" @click="selectBodyPart('Legs')">
+            <button class="action-item" @click="selectBodyPart('legs')">
                 <img src="@/assets/icons/legs-icon.png" alt="" class="action-icon">
                 Legs
-            </button>
-            <button class="action-item unavailable" @click="selectBodyPart('Shoulders')">
-                <img src="@/assets/icons/shoulder-icon.png" alt="" class="action-icon">
-                Shoulders
             </button>
         </div>
     </div>
@@ -64,14 +60,17 @@ function displayGym()
 
 function selectBodyPart(part)
 {
+    console.log(`selectBodyPart(${part})`);
     gymBodyPartIsSelected.value = true;
     bodyPart.value = part;
 }
 
 function goToStretch()
 {
+    console.log(`LOADING PAGE -> sport=${sport}, bodyPart=${bodyPart.value}`);
+    const bodyP = bodyPart.value;
     router.push(
-        { path: '/stretch', query: {sport, bodyPart} }
+        { path: '/stretch', query: {sport, bodyP} }
     );
 }
 </script>

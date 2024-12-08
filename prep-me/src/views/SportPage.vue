@@ -9,7 +9,7 @@
                 <img src="@/assets/icons/sports/skate-icon.png" alt="" class="action-icon">
                 Skateboard
             </button>
-            <button class="action-item unavailable" @click="selectSport('Gym')">
+            <button class="action-item" @click="selectSport('Gym')">
                 <img src="@/assets/icons/sports/gym-icon.png" alt="" class="action-icon">
                 Gym
             </button>
@@ -34,7 +34,7 @@ const router = useRouter();
 
 function selectSport(sport)
 {
-    if (sport != 'Skate') {
+    if (sport != 'Skate' && sport != 'Gym') {
         return;
     }
     

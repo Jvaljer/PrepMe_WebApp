@@ -53,11 +53,16 @@ import skateStretchesData from '@/resources/skate-stretches.json';
 import calisthenicsStretchesData from '@/resources/skate-stretches.json';
 import skiingStretchesData from '@/resources/skate-stretches.json';
 
+import gymPullData from '@/resources/gym-pull-stretches.json';
+import gymPushData from '@/resources/gym-push-stretches.json';
+import gymLegsData from '@/resources/gym-legs-stretches.json';
+
 const router = useRouter();
 const route = useRoute();
 
 const sport = route.query.sport || 'ERR_NOSPORT_BIS';
 const sportName = sport.charAt(0).toLowerCase() + sport.slice(1) || 'ERR_NONAME';
+const bodyPart = route.query.bodyP || 'ERR_NOBODYPART';
 
 const stretchId = ref('ERR_NOID');
 const stretchName = ref('');
@@ -79,16 +84,34 @@ onMounted(() => {
 
 function getStretchesData()
 {
+    console.log(`getStretchesData(${sport}) ...`);
     switch (sport)
     {
         case 'Skate':
             return skateStretchesData;
+        case 'Gym':
+            return getBodyPartStretches();
         case 'Calisthenics':
             return calisthenicsStretchesData;
         case 'Skiing':
             return skiingStretchesData;
         default:
             return 'ERR_SPORTNOTFOUND';
+    }
+}
+function getBodyPartStretches()
+{
+    console.log(`... getBodyPartStretches(${bodyPart})`);
+    switch (bodyPart)
+    {
+        case 'pull':
+            return gymPullData;
+        case 'push':
+            return gymPushData;
+        case 'legs':
+            return gymLegsData;
+        default:
+            return 'ERR_BODYPARTNOTFOUND';
     }
 }
 function getStretchName(id)
@@ -124,7 +147,8 @@ function updateStretch()
 
 function getIllustrationPath()
 {
-    const filePath = "/illustrations/"+sportName+"/stretch-"+stretchId.value+".png";
+    // const filePath = "/illustrations/"+sportName+"/stretch-"+stretchId.value+".png";
+    const filePath = (sport==='Gym') ? `/illustrations/${sportName}/${bodyPart}/stretch-${stretchId.value}.png` : `/illustrations/${sportName}/stretch-${stretchId.value}.png`;
     return filePath;
 }
 // Handling Stretches Navigation
@@ -232,7 +256,7 @@ function finishStretches()
             align-items: center;
 
             gap: 2rem;
-            padding-bottom: 2rem;
+            padding-bottom: 6rem;
 
             .nav-btn {
                 background: fade(@navigation-color, 32%);

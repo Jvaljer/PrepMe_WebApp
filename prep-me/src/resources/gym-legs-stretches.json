@@ -1,0 +1,84 @@
+{
+    "stretches": [
+        {
+            "id": 0,
+            "name": "Ankle Rolls",
+            "bodyParts": "Ankles",
+            "description": "Sit or stand, lift one foot and rotate ankle in circles, then switch.",
+            "duration": "10 rotations per direction.",
+            "advice": "Keep the movement controlled, focus on full range."
+        },
+        {
+            "id": 1,
+            "name": "Hip Circles",
+            "bodyParts": "Hips",
+            "description": "Stand with feet shoulder-width apart, place hands on hips, make large circles.",
+            "duration": "10 circles each way.",
+            "advice": "Movements should be fluid, knees slightly bent."
+        },
+        {
+            "id": 2,
+            "name": "Quad Stretch",
+            "bodyParts": "Quadriceps",
+            "description": "Stand, pull one heel towards buttock, hold ankle. Switch legs.",
+            "duration": "15 seconds per leg.",
+            "advice": "Keep your balance, avoid leaning forward."
+        },
+        {
+            "id": 3,
+            "name": "Lateral Lunges",
+            "bodyParts": "Hips & Inner Thighs",
+            "description": "Step one foot out to the side, squat low, return to center. Alternate sides.",
+            "duration": "8 to 10 lunges per side.",
+            "advice": "Keep chest up, knee tracking over toes."
+        },
+        {
+            "id": 4,
+            "name": "Calf Raises",
+            "bodyParts": "Calves",
+            "description": "Stand, rise onto toes, hold, then lower slowly.",
+            "duration": "12 to 15 repetitions.",
+            "advice": "Move slowly for controlled activation."
+        },
+        {
+            "id": 5,
+            "name": "Glute Bridges",
+            "bodyParts": "Glutes & Hamstrings",
+            "description": "Lie on back, bend knees, lift hips toward the ceiling, hold.",
+            "duration": "8 to 10 repetitions.",
+            "advice": "Engage core, squeeze glutes at the top."
+        },
+        {
+            "id": 6,
+            "name": "Step-Back Lunges",
+            "bodyParts": "Quadriceps & Knees",
+            "description": "Stand, step one leg back into a lunge, lower, push back to standing. Alternate legs.",
+            "duration": "8 to 10 repetitions per leg.",
+            "advice": "Keep front knee aligned, move slowly."
+        },
+        {
+            "id": 7,
+            "name": "Side Lunges",
+            "bodyParts": "Hips & Knees",
+            "description": "Step one foot out to the side, squat low, return to center. Switch sides.",
+            "duration": "8 to 10 lunges per side.",
+            "advice": "Keep movements steady, avoid letting knee go past toes."
+        },
+        {
+            "id": 8,
+            "name": "Plie Squats",
+            "bodyParts": "Inner Thighs & Glutes",
+            "description": "Stand with feet wider than shoulder-width apart, squat down, keeping chest up.",
+            "duration": "10 to 12 repetitions.",
+            "advice": "Keep knees tracking over toes, move smoothly."
+        },
+        {
+            "id": 9,
+            "name": "Walking Lunges",
+            "bodyParts": "Quadriceps, Hamstrings, Glutes",
+            "description": "Step forward into a lunge, lower body, step back, alternate legs.",
+            "duration": "10 lunges per leg.",
+            "advice": "Maintain balance, keep front knee aligned over ankle."
+        }
+    ]
+}
