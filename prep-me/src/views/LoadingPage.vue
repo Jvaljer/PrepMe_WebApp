@@ -81,5 +81,50 @@ function goToStretch()
     justify-content: start;
     padding-top: 4rem;
     gap: 4rem;
+
+    .header-container {
+        .title {
+            animation: slideInFromLeft 0.5s ease-in;
+        }
+        .subtitle {
+            animation: slideInFromRight 0.5s ease-in;
+        }
+    }
+
+    .design-btn {
+        animation-delay: 1s;
+        animation: scaleUp 0.5s ease-in;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(A);
+        opacity: 1;
+    }
+}
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 </style>

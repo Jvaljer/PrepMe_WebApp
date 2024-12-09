@@ -143,7 +143,8 @@ function getStretchesAmount()
 
 function updateStretch()
 {
-    if (!showAdvice) showAdvice.value = !showAdvice.value;
+    showAdvice.value = true;
+
     stretchName.value = getStretchName(stretchId.value);
     stretchDescription.value = getStretchDescription(stretchId.value);
     stretchDuration.value = getStretchDuration(stretchId.value);
