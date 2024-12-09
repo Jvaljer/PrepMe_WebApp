@@ -9,18 +9,20 @@
             <span class="title snd-txt">{{ sport }} Stretching</span>
             <span class="subtitle fst-txt">{{ stretchId+1 }} - {{ stretchName }}</span>
             <!-- <StretchImage :sportName="sportName" :stretchNumber="stretchId" /> -->
-             <img :src=getIllustrationPath() style="width: 16rem; height: 16rem;"/>
+             <img :src=getIllustrationPath() style="width: 65vw"/>
         </div>
         <div class="stretch-content">
+            <!-- <button class="stretch-advice" @click="toggleAdvice">?</button> -->
+            <img src="@/assets/icons/advice-icon.png" class="stretch-advice" @click="toggleAdvice"/>
+            <div v-if="!showAdvice" class="advice-toast" @click="toggleAdvice">
+                <img src="@/assets/icons/advice-icon.png" class="stretch-icon"/>
+                <span class="advice-toast-txt">{{ stretchAdvice }}</span>
+            </div>
             <span class="stretch-description core-txt">{{ stretchDescription }}</span>
             <div class="stretch-infos core-txt">
                 <div class="stretch-info">
                     <img src="@/assets/icons/timer-icon.png" alt="" class="stretch-icon">
                     <span>{{ stretchDuration }}</span>
-                </div>
-                <div class="stretch-info">
-                    <img src="@/assets/icons/advice-icon.png" alt="" class="stretch-icon">
-                    <span>"{{ stretchAdvice }}"</span>
                 </div>
             </div>
             <div class="stretch-navigation">
@@ -73,6 +75,8 @@ const stretchAdvice = ref('ERR_NOADVICE');
 const stretchAmount = ref(0);
 
 const stretches = ref(null);
+
+const showAdvice = ref(true);
 
 // Fetching stretches content
 onMounted(() => {
@@ -139,6 +143,7 @@ function getStretchesAmount()
 
 function updateStretch()
 {
+    if (!showAdvice) showAdvice.value = !showAdvice.value;
     stretchName.value = getStretchName(stretchId.value);
     stretchDescription.value = getStretchDescription(stretchId.value);
     stretchDuration.value = getStretchDuration(stretchId.value);
@@ -172,6 +177,11 @@ function finishStretches()
     router.push(
         { path: '/finished' }
     );
+}
+
+function toggleAdvice()
+{
+    showAdvice.value = !showAdvice.value;
 }
 </script>
 
@@ -214,12 +224,56 @@ function finishStretches()
 
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
 
         width: 100%;
         height: 100%;
 
+        .stretch-advice {
+            position: absolute;
+            bottom: calc(50% - 1rem - 20px);
+            right: 1rem;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            transition: all 0.25s ease-in;
+            &:active {
+                transform: scale(1.1);
+            }
+
+            width: 3rem;
+            height: 3rem;
+        }
+        .advice-toast {
+            position: absolute;
+            width: 75vw;
+            padding: 1rem;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            top: 4rem;
+            right: calc(12.5vw - 1rem);
+
+            background-color: lighten(@background-color, 16%);
+
+            border-radius: 0.5rem;
+            border: solid 0.065rem @core-text-color;
+
+            .stretch-icon {
+                width: 2rem;
+                height: 2rem;
+            }
+            .advice-toast-txt {
+                font-size: 1.5rem;
+                line-height: 1.25;
+            }
+        }
         .stretch-description {
             font-size: 1.5rem;
             line-height: 1;
@@ -255,8 +309,8 @@ function finishStretches()
             justify-content: center;
             align-items: center;
 
-            gap: 2rem;
-            padding-bottom: 6rem;
+            gap: 1rem;
+            padding-bottom: 2rem;
 
             .nav-btn {
                 background: fade(@navigation-color, 32%);
