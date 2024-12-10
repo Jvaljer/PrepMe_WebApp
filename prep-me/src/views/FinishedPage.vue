@@ -10,6 +10,27 @@
   
   
 <script setup>
+import { logs } from '../logger';
+import { onMounted } from 'vue';
+
+function downLoadLogs()
+{
+    const blob = new Blob([logs.value], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+
+    a.href = url;
+    a.download = "logs.txt";
+    a.click();
+
+    URL.revokeObjectURL(url);
+}
+
+onMounted(() => {
+    console.log("DOWNLOADING LOGS ...");
+    downLoadLogs();
+    console.log("... DONE");
+});
 </script>
   
   

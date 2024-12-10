@@ -67,7 +67,6 @@ function selectBodyPart(part)
 
 function goToStretch()
 {
-    console.log(`LOADING PAGE -> sport=${sport}, bodyPart=${bodyPart.value}`);
     const bodyP = bodyPart.value;
     router.push(
         { path: '/stretch', query: {sport, bodyP} }
