@@ -4,7 +4,8 @@
             <span class="header-title snd-txt">Well Done !</span>
             <span class="header-subtitle fst-txt">You're now ready to perform with a minimal risk of injury</span>
         </div>
-        <img src="@/assets/icons/done-icon.png" alt="" class="finished-img">
+        <img src="@/assets/icons/done-icon.png" alt="" class="finished-img" @click="downLoadLogs">
+        <p style="opacity: 0.32; font-size: 0.5rem">Click the icon to download logs !</p>
     </div>
 </template>
   
@@ -25,12 +26,6 @@ function downLoadLogs()
 
     URL.revokeObjectURL(url);
 }
-
-onMounted(() => {
-    console.log("DOWNLOADING LOGS ...");
-    downLoadLogs();
-    console.log("... DONE");
-});
 </script>
   
   
