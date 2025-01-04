@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
-@white: #F5F7F8;
-@yellow: #F4CE14;
+@white:       #F5F7F8;
+@yellow:      #F4CE14;
 @lightyellow: #F5E8A6;
 @text-yellow: #CDAD11;
-@green: #658147;
-@blue: #495E57;
-@lightblue: #B7C0BE;
-@grey: #A0A0A0;
-@darkgrey: #45474B;
-@black: #1E1F21;
+@green:       #658147;
+@blue:        #495E57;
+@text-blue:   #3D4F49;
+@lightblue:   #B7C0BE;
+@grey:        #A0A0A0;
+@darkgrey:    #45474B;
+@black:       #1E1F21;
 
 @thin: 200;
 @light: 300;
@@ -24,6 +25,9 @@
 @h3: 1.5em;
 @txt: 1em;
 @detail: 0.5em;
+
+@radius: 1rem;
+@radius-mid: 0.75rem;
 
 body { font-size: 16px; /* serves as ref for em & rem */ }
 
@@ -57,13 +61,31 @@ body { font-size: 16px; /* serves as ref for em & rem */ }
 
     gap: 8rem;
 }
+.v-t-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
 
 .yellow-btn-big {
     background-color: @lightyellow;
     color: @text-yellow;
     padding: 1rem 1.5rem;
-    border-radius: 1rem;
+    border-radius: @radius;
     border: solid 0.125em @text-yellow;
     font-size: 2em;
     font-weight: 600;
+}
+
+.yellow-btn-mid {
+    background-color: @lightyellow;
+    color: @text-yellow;
+    padding: 0.5rem 1rem;
+    border-radius: @radius-mid;
+    border: solid 0.125em @text-yellow;
+    font-size: 1.75em;
+    font-weight: @semibold;
 }
