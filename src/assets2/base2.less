@@ -11,6 +11,22 @@
 @darkgrey: #45474B;
 @black: #1E1F21;
 
+@thin: 200;
+@light: 300;
+@regular: normal;
+@medium: 500;
+@semibold: 600;
+@bold: bold;
+
+@h0: 4em;
+@h1: 3em;
+@h2: 2em;
+@h3: 1.5em;
+@txt: 1em;
+@detail: 0.5em;
+
+body { font-size: 16px; /* serves as ref for em & rem */ }
+
 #app {
     font-family: 'Lexend', sans-serif;
 
@@ -40,4 +56,14 @@
     width: 100%;
 
     gap: 8rem;
+}
+
+.yellow-btn-big {
+    background-color: @lightyellow;
+    color: @text-yellow;
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+    border: solid 0.125em @text-yellow;
+    font-size: 2em;
+    font-weight: 600;
 }
