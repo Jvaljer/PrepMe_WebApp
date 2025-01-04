@@ -29,7 +29,7 @@
                     <span class="sport2-txt">12 steps</span>
                 </div>
             </div>
-            <button class="yellow-btn-mid" @click="selectSport('Gym')">Let's Go !</button>
+            <button class="yellow-btn-mid" @click="selectSport('Skate')">Let's Go !</button>
         </div>
         
         <!-- GYM SECTION -->
@@ -56,7 +56,7 @@
                     <span class="sport2-txt">5-6 steps</span>
                 </div>
             </div>
-            <button class="yellow-btn-mid" @click="selectSport('Skate')">Let's Go !</button>
+            <button class="yellow-btn-mid" @click="selectSport('Gym')">Let's Go !</button>
         </div>
 
     </div>
@@ -100,9 +100,19 @@ function handleSwipe()
 // Routing
 function selectSport(sport)
 {
-    router.push(
-        { path: '/loading2', query: {sport} }
-    );
+    if (sport === 'Gym')
+    {
+        router.push(
+            { path: '/gymload', query: {sport} }
+        );
+    }
+    else
+    {
+        let session = 'none';
+        router.push(
+            { path: '/loading2', query: {sport, session} }
+        );
+    }
 }
 </script>
 
