@@ -215,7 +215,7 @@ function finishStretches()
         height: 60%;
         width: 100%;
         z-index: 0;
-        padding: 1.5rem 1rem;
+        padding: 1rem;
 
         .stretch2-header {
             display: flex;
@@ -240,11 +240,13 @@ function finishStretches()
         }
 
         .stretch2-img {
-            width: 100%;
-            height: 100%;
+            padding-top: 1.5rem;
+            height: 75%;
             z-index: 2;
         }
         .stretch2-toolbar {
+            margin-top: -2rem;
+            padding-bottom: 1rem;
             display: flex;
             justify-content: space-between;
             width: 100%;
@@ -268,7 +270,7 @@ function finishStretches()
         height: 100%;
 
         .stretch2-description {
-            font-size: @txt;
+            font-size: @h3;
             font-weight: @light;
             color: @black;
             text-align: left;
@@ -288,7 +290,7 @@ function finishStretches()
             }
             .stretch2-text {
                 line-height: 0.8;
-                font-size: @txt;
+                font-size: @h3;
                 font-weight: @thin;
                 color: @black;
             }

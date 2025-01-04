@@ -147,7 +147,7 @@ function selectSport(sport)
         padding-bottom: 1rem;
 
         .sport2-title {
-            font-size: @h1;
+            font-size: @h2;
             font-weight: @medium;
             padding: 0.5rem 1rem;
             border-radius: @radius-mid;
@@ -183,8 +183,8 @@ function selectSport(sport)
                 gap: 0.5rem;
                 align-items: center;
                 .sport2-icon {
-                    width: 3.5rem;
-                    height: 3.5rem;
+                    width: 2.5rem;
+                    height: 2.5rem;
                 }
                 .sport2-txt {
                     font-size: @h3;
