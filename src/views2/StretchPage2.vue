@@ -1,4 +1,8 @@
 <template>
+    <div v-if="!showAdvice" class="stretch2-advice" @click="toggleAdvice()">
+        <span class="stretch2-advice-text">{{ stretchAdvice }}</span>
+        <img src="@/assets2/icons/question-mark-bis.png" alt="" class="stretch2-icon" />
+    </div>
     <div id="stretch-container-2" class="v-t-container">
         <div class="stretch2-content" :style="backgroundImage">
             <div class="stretch2-header">
@@ -301,6 +305,31 @@ function finishStretches()
         align-items: center;
 
         padding: 1.5rem 1rem;
+    }
+}
+
+.stretch2-advice {
+    z-index: 4;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    left: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+    padding: 0.5rem 1rem;
+    background-color: @thinblue;
+    border-radius: @radius-mid;
+
+    .stretch2-advice-text {
+        font-size: @h3;
+        font-weight: @light;
+        color: @black;
+    }
+    .stretch2-icon {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }
 </style>
