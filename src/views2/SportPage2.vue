@@ -170,7 +170,7 @@ function selectSport(sport)
         padding-top: 0.25rem;
         padding-bottom: 3rem;
         .sport2-swipe-info {
-            font-size: @txt;
+            font-size: @detail;
             color: @lightblue;
         }
         .sport2-stats {
@@ -187,7 +187,7 @@ function selectSport(sport)
                     height: 3.5rem;
                 }
                 .sport2-txt {
-                    font-size: @h2;
+                    font-size: @h3;
                     font-weight: @regular;
                     color: @text-blue;
                 }

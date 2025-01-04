@@ -226,13 +226,13 @@ function finishStretches()
             text-align: left;
 
             .stretch2-title {
-                font-size: @h2;
+                font-size: @h3;
                 font-weight: @medium;
                 color: @white;
             }
             .stretch2-indication {
                 width: 100%;
-                font-size: @h3;
+                font-size: @h2;
                 font-weight: @regular;
                 color: @white;
                 opacity: 0.75;
@@ -268,7 +268,7 @@ function finishStretches()
         height: 100%;
 
         .stretch2-description {
-            font-size: @h3;
+            font-size: @txt;
             font-weight: @light;
             color: @black;
             text-align: left;
@@ -288,7 +288,7 @@ function finishStretches()
             }
             .stretch2-text {
                 line-height: 0.8;
-                font-size: @h3;
+                font-size: @txt;
                 font-weight: @thin;
                 color: @black;
             }
@@ -323,7 +323,7 @@ function finishStretches()
     border-radius: @radius-mid;
 
     .stretch2-advice-text {
-        font-size: @h3;
+        font-size: @txt;
         font-weight: @light;
         color: @black;
     }

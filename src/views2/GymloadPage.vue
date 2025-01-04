@@ -100,12 +100,12 @@ function cancel()
         text-align: center;
         
         .gymload-pretitle {
-            font-size: @h2;
+            font-size: @h3;
             font-weight: @medium;
             color: @black;
         }
         .gymload-title {
-            font-size: @h2;
+            font-size: @h3;
             font-weight: @semibold;
             color: @black;
             text-shadow: -2px -2px @yellow;
@@ -155,7 +155,7 @@ function cancel()
                         height: 2.5rem;
                     }
                     .gymload-txt {
-                        font-size: @h3;
+                        font-size: @txt;
                         font-weight: @medium;
                     }
                 }
