@@ -19,7 +19,7 @@ export default defineConfig({
     preprocessorOptions: {
       less: {
         // Inject base.less globally into all .less files
-        additionalData: `@import "@/assets/base.less";`
+        additionalData: `@import "@/assets2/base2.less";`
       },
     },
   },

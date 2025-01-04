@@ -107,7 +107,7 @@ function updateStretch()
 function getIllustrationPath()
 {
     // const filePath = "/illustrations/"+sportName+"/stretch-"+stretchId.value+".png";
-    const filePath = (sport==='Gym') ? `/illustrations/${sportName}/${bodyPart}/stretch-${stretchId.value}.png` : `/illustrations/${sportName}/stretch-${stretchId.value}.png`;
+    const filePath = (sport==='Gym') ? `/illustrations2/${sportName}/${bodyPart}/stretch-${stretchId.value}.png` : `/illustrations/${sportName}/stretch-${stretchId.value}.png`;
     return filePath;
 }
 
@@ -126,7 +126,7 @@ function nextStretch()
 
 function closeSession()
 {
-    router.push('/sports');
+    router.push('/sports2');
 }
 
 function finishStretches()

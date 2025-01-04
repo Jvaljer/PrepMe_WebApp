@@ -19,4 +19,10 @@ function goToSPorts()
 
 
 <style lang="less" scoped>
+#home-container-2 {
+    background-image: url('@/assets2/images/bg-100.png');
+    background-size: cover; /* Optional: Ensures the image covers the entire background */
+    background-position: center; /* Optional: Centers the image */
+    background-repeat: no-repeat; /* Optional: Prevents tiling */
+}
 </style>
