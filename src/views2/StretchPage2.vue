@@ -19,8 +19,9 @@
             </div>
         </div>
         <div class="stretch2-navbar">
-            <button class="blue-btn-small" @click="previousStretch()">Previous</button>
-            <button class="yellow-btn-small" @click="nextStretch()">Next Stretch</button>
+            <button v-if="stretchId > 0" class="blue-btn-small" @click="previousStretch()">Previous</button>
+            <button v-if="stretchId != (stretchAmount-1)" class="yellow-btn-small" @click="nextStretch()">Next Stretch</button>
+            <button v-if="stretchId == (stretchAmount-1)" class="yellow-btn-small" @click="finishStretches()">Done !</button>
         </div>
     </div>
 </template>
@@ -292,9 +293,12 @@ function finishStretches()
 
     .stretch2-navbar {
         display: flex;
+        flex-direction: row;
         width: 100%;
         box-sizing: border-box;
-        justify-content: space-between;
+        justify-content: center;
+        gap: 3rem;
+        align-items: center;
 
         padding: 1.5rem 1rem;
     }

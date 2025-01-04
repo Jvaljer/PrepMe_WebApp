@@ -1,5 +1,5 @@
 <template>
-    <button id="logo-btn" @click="cancel()">PrepMe!</button>
+    <button class="logo-btn" @click="cancel()">PrepMe!</button>
     <!-- LOT OF HARDCODE YET -->
     <div id="gymload-container" class="v-container">
         <div class="gymload-header">
@@ -180,19 +180,6 @@ function cancel()
             }
         }
     }
-}
-
-#logo-btn {
-    position: absolute;
-    top: 8px;
-    left: calc(50% - 32px);
-    border: none;
-    background: none;
-    font-size: @txt;
-    font-weight: @semibold;
-    color: @black;
-    text-shadow: -1px -1px @yellow;
-    opacity: 0.75;
 }
 
 #gym-pull-btn {

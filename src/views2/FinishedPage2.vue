@@ -1,44 +1,60 @@
 <template>
-    <div id="finished-container" class="v-container">
-        <div class="header-container">
-            <span class="header-title snd-txt">Well Done !</span>
-            <span class="header-subtitle fst-txt">You're now ready to perform with a minimal risk of injury</span>
+    <button class="logo-btn" @click="cancel()">PrepMe!</button>
+    <div id="finished-container-2" class="v-container">
+        <div class="finished2-header">
+            <span class="finished2-pretitle">Thanks for using</span>
+            <span class="finished2-title">PrepMe!</span>
         </div>
-        <img src="@/assets/icons/done-icon.png" alt="" class="finished-img" @click="downLoadLogs">
-        <p style="opacity: 0.32; font-size: 0.5rem">Click the icon to download logs !</p>
+        <span class="finished2-text">You're ready to go! Minimal injury risk, enjoy your session!</span>
     </div>
 </template>
   
   
 <script setup>
-import { logs } from '../logger';
-import { onMounted } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 
-function downLoadLogs()
+const router = useRouter();
+
+function cancel()
 {
-    const blob = new Blob([logs.value], { type: "text/plain" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-
-    a.href = url;
-    a.download = "logs.txt";
-    a.click();
-
-    URL.revokeObjectURL(url);
+    router.push(
+        { path: '/' }
+    );
 }
 </script>
   
   
 <style lang="less" scoped>
-#finished-container {
-    .header-title {
-        font-size: 3rem;
-        font-weight: bold;
+#finished-container-2 {
+    background-image: url('@/assets2/images/bg-100.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .finished2-header {
+        display: flex;
+        flex-direction: column;
         text-align: center;
+        
+        .finished2-pretitle {
+            font-size: @h2;
+            font-weight: @medium;
+            color: @yellow;
+        }
+        .finished2-title {
+            font-size: @h1;
+            font-weight: @bold;
+            color: @black;
+            text-shadow: -4px -4px @yellow;
+        }
     }
-    .header-subtitle {
-        font-size: 2rem;
-        line-height: 1;
+
+    .finished2-text {
+        font-size: @h3;
+        color: @black;
+        opacity: 0.8;
+        width: 80%;
+        text-align: center;
     }
 }
 </style>
