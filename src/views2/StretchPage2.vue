@@ -7,26 +7,26 @@
     <div id="stretch-container-2" class="v-t-container">
         <div class="stretch2-content" :style="backgroundImage">
             <div class="stretch2-header">
-                <span class="stretch2-title">{{ sport }} stretching</span>
-                <span class="stretch2-indication">{{ stretchId+1 }} - {{ stretchName }}</span>
+                <span class="stretch2-title appear-fade-in" style="opacity: 0;">{{ sport }} stretching</span>
+                <span class="stretch2-indication appear-slide-from-up" style="opacity: 0;">{{ stretchId+1 }} - {{ stretchName }}</span>
             </div>
-            <img :src=getIllustrationPath() class="stretch2-img"/>
+            <img :src=getIllustrationPath() class="stretch2-img appear-fade-in fade-1" style="opacity: 0;"/>
             <div class="stretch2-toolbar">
-                <img src="@/assets2/icons/cross.png" alt="" class="stretch2-icon" @click="closeSession()"/>
-                <img src="@/assets2/icons/question-mark.png" alt="" class="stretch2-icon" @click="toggleAdvice()"/>
+                <img src="@/assets2/icons/cross.png" alt="" class="stretch2-icon appear-scale-up" @click="closeSession()" style="opacity: 0;"/>
+                <img src="@/assets2/icons/question-mark.png" alt="" class="stretch2-icon appear-scale-up" @click="toggleAdvice()" style="opacity: 0;"/>
             </div>
         </div>
         <div class="stretch2-infos">
-            <span class="stretch2-description">{{ stretchDescription }}</span>
-            <div class="stretch2-hint">
+            <span class="stretch2-description appear-slide-left" style="opacity: 0;">{{ stretchDescription }}</span>
+            <div class="stretch2-hint appear-slide-left slide-1" style="opacity: 0;">
                 <img src="@/assets2/icons/clock.png" alt="" class="stretch2-icon"/>
                 <span class="stretch2-text">{{ stretchDuration }}</span>
             </div>
         </div>
         <div class="stretch2-navbar">
-            <button v-if="stretchId > 0" class="blue-btn-small" @click="previousStretch()">Previous</button>
-            <button v-if="stretchId != (stretchAmount-1)" class="yellow-btn-small" @click="nextStretch()">Next Stretch</button>
-            <button v-if="stretchId == (stretchAmount-1)" class="yellow-btn-small" @click="finishStretches()">Done !</button>
+            <button v-if="stretchId > 0" class="blue-btn-small appear-scale-up scale-1" @click="previousStretch()" style="opacity: 0;">Previous</button>
+            <button v-if="stretchId != (stretchAmount-1)" class="yellow-btn-small appear-scale-up scale-1" @click="nextStretch()" style="opacity: 0;">Next Stretch</button>
+            <button v-if="stretchId == (stretchAmount-1)" class="yellow-btn-small appear-scale-up scale-1" @click="finishStretches()" style="opacity: 0;">Done !</button>
         </div>
     </div>
 </template>
@@ -234,16 +234,16 @@ function cancel()
             text-align: left;
 
             .stretch2-title {
-                font-size: @h3;
+                font-size: @h2;
                 font-weight: @medium;
                 color: @white;
             }
             .stretch2-indication {
                 width: 100%;
-                font-size: @h2;
+                font-size: @h3;
                 font-weight: @regular;
                 color: @white;
-                opacity: 0.75;
+                opacity: 0.5;
             }
         }
 
@@ -340,6 +340,94 @@ function cancel()
     .stretch2-icon {
         width: 2.5rem;
         height: 2.5rem;
+    }
+}
+
+/* Animations */
+.appear-fade-in {
+    animation: fade-in 0.5s ease-in;
+    animation-fill-mode: forwards;
+}
+.fade-1 {
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.appear-slide-from-up {
+    animation: slide-up 0.33s ease-in;
+    animation-delay: 0.33s;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-up {
+    from {
+        transform: translateY(-50%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.appear-scale-up {
+    animation: scale-up 0.75s ease-in;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+.scale-1 {
+    animation-delay: 1s;
+}
+@keyframes scale-up {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    75% {
+        transform: scale(1.125);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.appear-slide-left {
+    animation: slide-left 0.5s ease-in;
+    animation-delay: 1.25s;
+    animation-fill-mode: forwards;
+}
+.slide-1 {
+    animation-delay: 1.5s;
+}
+@keyframes slide-left {
+    0% {
+        transform: translateX(-25%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    60% {
+        transform: translateX(5%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
     }
 }
 </style>
