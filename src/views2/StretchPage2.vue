@@ -1,4 +1,5 @@
 <template>
+    <button class="logo-btn" @click="cancel()">PrepMe!</button>
     <div v-if="!showAdvice" class="stretch2-advice" @click="toggleAdvice()">
         <span class="stretch2-advice-text">{{ stretchAdvice }}</span>
         <img src="@/assets2/icons/question-mark-bis.png" alt="" class="stretch2-icon" />
@@ -179,6 +180,13 @@ function finishStretches()
 {
     router.push(
         { path: '/finished2' }
+    );
+}
+
+function cancel()
+{
+    router.push(
+        { path: '/sports2' }
     );
 }
 </script>

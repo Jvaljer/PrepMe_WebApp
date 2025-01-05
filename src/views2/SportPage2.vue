@@ -9,54 +9,54 @@
         <div id="skate-cover" class="sport2-cover"
             v-if="currentSport === 'Skate'"
         >
-            <span class="sport2-title">Skateboard</span>
+            <span class="sport2-title appear-slide-from-bottom" style="opacity:0;">Skateboard</span>
         </div>
         <div id="skate-info" class="sport2-info"
             v-if="currentSport === 'Skate'"
         >
             <span class="sport2-swipe-info">swip to change the sport >></span>
             <div class="sport2-stats">
-                <div class="sport2-stat">
+                <div class="sport2-stat appear-slide-from-left" style="opacity:0;">
                     <img src="@/assets2/icons/calories.png" alt="" class="sport2-icon">
                     <span class="sport2-txt">147 kcal</span>
                 </div>
-                <div class="sport2-stat">
+                <div class="sport2-stat appear-slide-from-left slide-1" style="opacity:0;">
                     <img src="@/assets2/icons/hourglass.png" alt="" class="sport2-icon">
                     <span class="sport2-txt">8 min</span>
                 </div>
-                <div class="sport2-stat">
+                <div class="sport2-stat appear-slide-from-left slide-2" style="opacity:0;">
                     <img src="@/assets2/icons/steps.png" alt="" class="sport2-icon">
                     <span class="sport2-txt">12 steps</span>
                 </div>
             </div>
-            <button class="yellow-btn-mid" @click="selectSport('Skate')">Let's Go !</button>
+            <button class="yellow-btn-mid appear-scale-up" @click="selectSport('Skate')">Let's Go !</button>
         </div>
         
         <!-- GYM SECTION -->
         <div id="gym-cover" class="sport2-cover"
             v-if="currentSport === 'Gym'"
         >
-            <span class="sport2-title">Gym</span>
+            <span class="sport2-title appear-slide-from-bottom" style="opacity:0;">Gym</span>
         </div>
         <div id="gym-info" class="sport2-info"
             v-if="currentSport === 'Gym'"
         >
             <span class="sport2-swipe-info"><< swip to change the sport</span>
             <div class="sport2-stats">
-                <div class="sport2-stat">
+                <div class="sport2-stat appear-slide-from-left" style="opacity:0;">
                     <img src="@/assets2/icons/calories.png" alt="" class="sport2-icon">
                     <span class="sport2-txt">104-156 kcal</span>
                 </div>
-                <div class="sport2-stat">
+                <div class="sport2-stat appear-slide-from-left slide-1" style="opacity:0;">
                     <img src="@/assets2/icons/hourglass.png" alt="" class="sport2-icon">
                     <span class="sport2-txt">5-7min</span>
                 </div>
-                <div class="sport2-stat">
+                <div class="sport2-stat appear-slide-from-left slide-2" style="opacity:0;">
                     <img src="@/assets2/icons/steps.png" alt="" class="sport2-icon">
                     <span class="sport2-txt">5-6 steps</span>
                 </div>
             </div>
-            <button class="yellow-btn-mid" @click="selectSport('Gym')">Let's Go !</button>
+            <button class="yellow-btn-mid appear-scale-up" @click="selectSport('Gym')">Let's Go !</button>
         </div>
 
     </div>
@@ -193,6 +193,67 @@ function selectSport(sport)
                 }
             }
         }
+    }
+}
+
+/* Animations */
+.appear-slide-from-bottom {
+    animation: slide-from-bottom 0.5s ease-in;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes slide-from-bottom {
+    from {
+        transform: translateY(75%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.appear-slide-from-left {
+    animation: slide-from-left 0.33s ease-in;
+    animation-fill-mode: forwards;
+}
+.slide-1 {
+    animation-delay: 0.25s;
+}
+.slide-2 {
+    animation-delay: 0.5s;
+}
+@keyframes slide-from-left {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    75% {
+        transform: translateX(25%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.appear-scale-up {
+    animation: scale-up 0.5s ease-out;
+    animation-fill-mode: forwards;
+}
+@keyframes scale-up {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
     }
 }
 </style>
