@@ -12,14 +12,29 @@
   
 <script setup>
 import { useRouter, useRoute } from 'vue-router';
+import { logs } from '@/logger';
 
 const router = useRouter();
 
 function cancel()
 {
+    downLoadLogs();
     router.push(
         { path: '/' }
     );
+}
+
+function downLoadLogs()
+{
+    const blob = new Blob([logs.value], { type: "text/plain" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+
+    a.href = url;
+    a.download = "logs.txt";
+    a.click();
+
+    URL.revokeObjectURL(url);
 }
 </script>
   
