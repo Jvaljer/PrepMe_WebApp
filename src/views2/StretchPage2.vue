@@ -35,6 +35,7 @@
 <script setup>
 import { computed, onMounted, ref } from 'vue';
 import { useRouter, useRoute } from 'vue-router';
+import { addStretches, getStretches } from '../indexedDB';
 
 import skateStretchesData from '@/resources/skate-stretches.json';
 import calisthenicsStretchesData from '@/resources/skate-stretches.json';
@@ -43,6 +44,17 @@ import skiingStretchesData from '@/resources/skate-stretches.json';
 import gymPullData from '@/resources/gym-pull-stretches.json';
 import gymPushData from '@/resources/gym-push-stretches.json';
 import gymLegsData from '@/resources/gym-legs-stretches.json';
+
+async function preloadData()
+{
+    await addStretches('Skate', 'General', skateStretchesData);
+    await addStretches('Calisthenics', 'General', calisthenicsStretchesData);
+    await addStretches('Skiing', 'General', skiingStretchesData);
+
+    await addStretches('Gym', 'Pull', gymPullData);
+    await addStretches('Gym', 'Push', gymPushData);
+    await addStretches('Gym', 'Legs', gymLegsData);
+}
 
 const router = useRouter();
 const route = useRoute();
@@ -64,8 +76,18 @@ const stretches = ref(null);
 
 const showAdvice = ref(true);
 
-onMounted(() => {
+onMounted(async () => {
+    /*await preloadData();
+    stretches.value = await fetchStretches();
+    if (stretches.value.length > 0)
+    {
+        stretchId.value = 0;
+        stretchAmount.value = stretches.value.stretches.length;
+        updateStretch();
+    } */
+
     //this snippet is only fetching & updating data
+    
     stretches.value = getStretchesData();
     stretchId.value = 0;  // Setting the stretchId to 0
     stretchAmount.value = getStretchesAmount();
@@ -83,7 +105,13 @@ const backgroundImage = computed(() => {
     }
 });
 
-function getStretchesData()
+async function fetchStretches()
+{
+    const result = await getStretches(sport, session);
+    return result ? result.stretches : [];
+}
+
+function getStretchesData() // initially "fetchStretches"
 {
     switch (sport)
     {
